@@ -78,10 +78,12 @@ public class Main {
         double salary = 29000;
         double totalSalaryWithPenny = 0;
         for (int i = 1; i <= 12; i++) {
-            totalSalaryWithPenny = salary + (i-1)*salary / 100;
-            salary = totalSalaryWithPenny;
+            totalSalaryWithPenny = salary + totalSalaryWithPenny + totalSalaryWithPenny/100;
+            // округлим полученный результат (пока известными нам) способами до сотых (копеек)
+            int around =(int) (totalSalaryWithPenny * 100);
+            double total = ( around/100.0);
 
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + salary + " рублей.");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
         }
 
 
