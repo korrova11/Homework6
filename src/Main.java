@@ -74,7 +74,7 @@ public class Main {
         }
     }
 
-    public static void task9() {
+    public static void task9()  {
         System.out.println("Задача 9");
         double salary = 29000;
         double totalSalaryWithPenny = 0;
